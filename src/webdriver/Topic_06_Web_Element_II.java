@@ -34,118 +34,116 @@ public class Topic_06_Web_Element_II {
 
 	}
 
-//	@Test
-//	public void TC_01_Verify_Display() {
-//		driver.get("https://automationfc.github.io/basic-form/index.html");
-//		WebElement title_Email = driver.findElement(By.xpath("//label[@for='mail']"));
-//		boolean display_Title_Email = title_Email.isDisplayed();
-//		WebElement text_Box_Email = driver.findElement(By.xpath("//input[@name='user_email']"));
-//		boolean display_Text_Box_Email = text_Box_Email.isDisplayed();
-//		WebElement title_Education = driver.findElement(By.xpath("//label[@for='edu']"));
-//		boolean display_Title_Education = title_Education.isDisplayed();
-//		WebElement text_Box_Education = driver.findElement(By.xpath("//textarea[@name='user_edu']"));
-//		boolean display_Text_Box_Education = text_Box_Education.isDisplayed();
-//		WebElement title_Age = driver.findElement(By.xpath("//label[text()='Age:']"));
-//		boolean display_Title_Age = title_Age.isDisplayed();
-//		WebElement radio_Button_Age = driver
-//				.findElement(By.xpath("//input[@id='under_18']"));
-//		boolean display_Radio_Button_Age = radio_Button_Age.isDisplayed();
-//		WebElement text_H5 = driver
-//				.findElement(By.xpath("//h5[text()='Name: User5']//parent::div[@class='figcaption']"));
-//		boolean display_Text_H5 = text_H5.isDisplayed();
-//		System.out.println(display_Title_Email);
-//		System.out.println(display_Text_Box_Email);
-//		System.out.println(display_Title_Education);
-//		System.out.println(display_Text_Box_Education);
-//		System.out.println(display_Title_Age);
-//		System.out.println(display_Radio_Button_Age);
-//		System.out.println(display_Text_H5);
-//		if ((display_Title_Email = true) && (display_Text_Box_Email = true) && (display_Title_Education = true)
-//				&& (display_Text_Box_Education = true) && (display_Title_Age) && (display_Radio_Button_Age = true)) {
-//			text_Box_Email.sendKeys("Automation Testing");
-//			text_Box_Education.sendKeys("Automation Testing");
-//			WebElement under_18 = driver.findElement(By.xpath("//input[@id='under_18']"));
-//			under_18.click();
-//		} else {
-//			System.out.println("No display in screen !!!");
-//		}
-//		if (display_Title_Email == true) {
-//			System.out.println("Element is displayed");
-//		} else {
-//			System.out.println("Element is not displayed");
-//		}
-//		if (display_Text_H5 == true) {
-//			System.out.println("Element is displayed");
-//		} else {
-//			System.out.println("Element is not displayed");
-//		}
-//	}
-//
-//	@Test
-//	public void TC_02_Verify_Enable() {
-//		driver.get("https://automationfc.github.io/basic-form/index.html");
-//		WebElement text_Box_Email = driver.findElement(By.xpath("//input[@name='user_email']"));
-//		boolean enabled_Text_Box_Email = text_Box_Email.isEnabled();
-//		WebElement radio_Button_Age = driver
-//				.findElement(By.xpath("//input[@id='under_18']"));
-//		boolean enabled_Radio_Button_Age = radio_Button_Age.isEnabled();
-//		WebElement text_Box_Education = driver.findElement(By.xpath("//textarea[@name='user_edu']"));
-//		boolean enabled_Text_Box_Education = text_Box_Education.isEnabled();
-//		WebElement drop_Down_Job_1 = driver.findElement(By.xpath("//select[@id='job1']"));
-//		boolean enabled_Drop_Down_Job_1 = drop_Down_Job_1.isEnabled();
-//		WebElement drop_Down_Job_2 = driver.findElement(By.xpath("//select[@id='job2']"));
-//		boolean enabled_Drop_Down_Job_2 = drop_Down_Job_2.isEnabled();
-//		WebElement check_Box_Interests = driver.findElement(By.xpath("//input[@id='development']"));
-//		boolean enabled_check_Box_Interests = check_Box_Interests.isEnabled();
-//		WebElement scroll_Slider = driver.findElement(By.xpath("//input[@id='slider-1']"));
-//		boolean enabled_scroll_Slider = scroll_Slider.isEnabled();
-//
-//		WebElement text_Box_Password = driver.findElement(By.xpath("//input[@id='disable_password']"));
-//		boolean enabled_text_Box_Password = text_Box_Password.isEnabled();
-//		WebElement radio_Button_Disable = driver.findElement(By.xpath("//input[@id='radio-disabled']"));
-//		boolean enabled_radio_Button_Disable = radio_Button_Disable.isEnabled();
-//		WebElement text_Box_Biography = driver.findElement(By.xpath("//textarea[@name='user_bio']"));
-//		boolean enabled_text_Box_Biography = text_Box_Biography.isEnabled();
-//		WebElement drop_Down_Job_3 = driver.findElement(By.xpath("//select[@id='job3']"));
-//		boolean enabled_Drop_Down_Job_3 = drop_Down_Job_3.isEnabled();
-//		WebElement check_Box_Interests_Disabled = driver.findElement(By.xpath("//input[@id='check-disbaled']"));
-//		boolean enabled_check_Box_Interests_Disabled = check_Box_Interests_Disabled.isEnabled();
-//		WebElement scroll_Slider_1 = driver.findElement(By.xpath("//input[@id='slider-2']"));
-//		boolean enabled_scroll_Slider_1 = scroll_Slider_1.isEnabled();
-//
-//		if ((enabled_Text_Box_Email == true) && (enabled_Radio_Button_Age == true) && (enabled_Text_Box_Education == true)
-//				&& (enabled_Drop_Down_Job_1 == true) && (enabled_Drop_Down_Job_2 == true)
-//				&& (enabled_check_Box_Interests == true) && (enabled_scroll_Slider == true)) {
-//			System.out.println("Element is enable !!!");
-//		} else {
-//			System.out.println("Element is disable !!!");
-//		}
-//
-//		if ((enabled_text_Box_Password == true) && (enabled_radio_Button_Disable == true)
-//				&& (enabled_text_Box_Biography == true) && (enabled_Drop_Down_Job_3 == true)
-//				&& (enabled_check_Box_Interests_Disabled == true) && (enabled_scroll_Slider_1 == true)) {
-//			System.out.println("Element is enable !!!");
-//		} else {
-//			System.out.println("Element is disable !!!");
-//		}
-//	}
-//	@Test
-//	public void TC_03_Verify_Selected() {
-//		driver.get("https://automationfc.github.io/basic-form/index.html");
-//		WebElement radio_Button_Age = driver
-//				.findElement(By.xpath("//input[@id='under_18']"));
-//		radio_Button_Age.click();
-//		boolean select_Radio_Button_Age = radio_Button_Age.isSelected();
-//		WebElement check_Box_Language = driver
-//				.findElement(By.xpath("//input[@id='java']"));
-//		check_Box_Language.click();
-//		boolean select_Check_Box_Language = check_Box_Language.isSelected();
-//		System.out.println(select_Radio_Button_Age);
-//		System.out.println(select_Check_Box_Language);
-//		check_Box_Language.click();
-//		boolean select_Check_Box_Language_1 = check_Box_Language.isSelected();
-//		System.out.println(select_Check_Box_Language_1);
-//	}
+	@Test
+	public void TC_01_Verify_Display() {
+		driver.get("https://automationfc.github.io/basic-form/index.html");
+		WebElement title_Email = driver.findElement(By.xpath("//label[@for='mail']"));
+		boolean display_Title_Email = title_Email.isDisplayed();
+		WebElement text_Box_Email = driver.findElement(By.xpath("//input[@name='user_email']"));
+		boolean display_Text_Box_Email = text_Box_Email.isDisplayed();
+		WebElement title_Education = driver.findElement(By.xpath("//label[@for='edu']"));
+		boolean display_Title_Education = title_Education.isDisplayed();
+		WebElement text_Box_Education = driver.findElement(By.xpath("//textarea[@name='user_edu']"));
+		boolean display_Text_Box_Education = text_Box_Education.isDisplayed();
+		WebElement title_Age = driver.findElement(By.xpath("//label[text()='Age:']"));
+		boolean display_Title_Age = title_Age.isDisplayed();
+		WebElement radio_Button_Age = driver.findElement(By.xpath("//input[@id='under_18']"));
+		boolean display_Radio_Button_Age = radio_Button_Age.isDisplayed();
+		WebElement text_H5 = driver
+				.findElement(By.xpath("//h5[text()='Name: User5']//parent::div[@class='figcaption']"));
+		boolean display_Text_H5 = text_H5.isDisplayed();
+		System.out.println(display_Title_Email);
+		System.out.println(display_Text_Box_Email);
+		System.out.println(display_Title_Education);
+		System.out.println(display_Text_Box_Education);
+		System.out.println(display_Title_Age);
+		System.out.println(display_Radio_Button_Age);
+		System.out.println(display_Text_H5);
+		if ((display_Title_Email = true) && (display_Text_Box_Email = true) && (display_Title_Education = true)
+				&& (display_Text_Box_Education = true) && (display_Title_Age) && (display_Radio_Button_Age = true)) {
+			text_Box_Email.sendKeys("Automation Testing");
+			text_Box_Education.sendKeys("Automation Testing");
+			WebElement under_18 = driver.findElement(By.xpath("//input[@id='under_18']"));
+			under_18.click();
+		} else {
+			System.out.println("No display in screen !!!");
+		}
+		if (display_Title_Email == true) {
+			System.out.println("Element is displayed");
+		} else {
+			System.out.println("Element is not displayed");
+		}
+		if (display_Text_H5 == true) {
+			System.out.println("Element is displayed");
+		} else {
+			System.out.println("Element is not displayed");
+		}
+	}
+
+	@Test
+	public void TC_02_Verify_Enable() {
+		driver.get("https://automationfc.github.io/basic-form/index.html");
+		WebElement text_Box_Email = driver.findElement(By.xpath("//input[@name='user_email']"));
+		boolean enabled_Text_Box_Email = text_Box_Email.isEnabled();
+		WebElement radio_Button_Age = driver.findElement(By.xpath("//input[@id='under_18']"));
+		boolean enabled_Radio_Button_Age = radio_Button_Age.isEnabled();
+		WebElement text_Box_Education = driver.findElement(By.xpath("//textarea[@name='user_edu']"));
+		boolean enabled_Text_Box_Education = text_Box_Education.isEnabled();
+		WebElement drop_Down_Job_1 = driver.findElement(By.xpath("//select[@id='job1']"));
+		boolean enabled_Drop_Down_Job_1 = drop_Down_Job_1.isEnabled();
+		WebElement drop_Down_Job_2 = driver.findElement(By.xpath("//select[@id='job2']"));
+		boolean enabled_Drop_Down_Job_2 = drop_Down_Job_2.isEnabled();
+		WebElement check_Box_Interests = driver.findElement(By.xpath("//input[@id='development']"));
+		boolean enabled_check_Box_Interests = check_Box_Interests.isEnabled();
+		WebElement scroll_Slider = driver.findElement(By.xpath("//input[@id='slider-1']"));
+		boolean enabled_scroll_Slider = scroll_Slider.isEnabled();
+
+		WebElement text_Box_Password = driver.findElement(By.xpath("//input[@id='disable_password']"));
+		boolean enabled_text_Box_Password = text_Box_Password.isEnabled();
+		WebElement radio_Button_Disable = driver.findElement(By.xpath("//input[@id='radio-disabled']"));
+		boolean enabled_radio_Button_Disable = radio_Button_Disable.isEnabled();
+		WebElement text_Box_Biography = driver.findElement(By.xpath("//textarea[@name='user_bio']"));
+		boolean enabled_text_Box_Biography = text_Box_Biography.isEnabled();
+		WebElement drop_Down_Job_3 = driver.findElement(By.xpath("//select[@id='job3']"));
+		boolean enabled_Drop_Down_Job_3 = drop_Down_Job_3.isEnabled();
+		WebElement check_Box_Interests_Disabled = driver.findElement(By.xpath("//input[@id='check-disbaled']"));
+		boolean enabled_check_Box_Interests_Disabled = check_Box_Interests_Disabled.isEnabled();
+		WebElement scroll_Slider_1 = driver.findElement(By.xpath("//input[@id='slider-2']"));
+		boolean enabled_scroll_Slider_1 = scroll_Slider_1.isEnabled();
+
+		if ((enabled_Text_Box_Email == true) && (enabled_Radio_Button_Age == true)
+				&& (enabled_Text_Box_Education == true) && (enabled_Drop_Down_Job_1 == true)
+				&& (enabled_Drop_Down_Job_2 == true) && (enabled_check_Box_Interests == true)
+				&& (enabled_scroll_Slider == true)) {
+			System.out.println("Element is enable !!!");
+		} else {
+			System.out.println("Element is disable !!!");
+		}
+
+		if ((enabled_text_Box_Password == true) && (enabled_radio_Button_Disable == true)
+				&& (enabled_text_Box_Biography == true) && (enabled_Drop_Down_Job_3 == true)
+				&& (enabled_check_Box_Interests_Disabled == true) && (enabled_scroll_Slider_1 == true)) {
+			System.out.println("Element is enable !!!");
+		} else {
+			System.out.println("Element is disable !!!");
+		}
+	}
+
+	@Test
+	public void TC_03_Verify_Selected() {
+		driver.get("https://automationfc.github.io/basic-form/index.html");
+		WebElement radio_Button_Age = driver.findElement(By.xpath("//input[@id='under_18']"));
+		radio_Button_Age.click();
+		boolean select_Radio_Button_Age = radio_Button_Age.isSelected();
+		WebElement check_Box_Language = driver.findElement(By.xpath("//input[@id='java']"));
+		check_Box_Language.click();
+		boolean select_Check_Box_Language = check_Box_Language.isSelected();
+		System.out.println(select_Radio_Button_Age);
+		System.out.println(select_Check_Box_Language);
+		check_Box_Language.click();
+		boolean select_Check_Box_Language_1 = check_Box_Language.isSelected();
+		System.out.println(select_Check_Box_Language_1);
+	}
 
 	@Test
 	public void TC_04_Register() {
