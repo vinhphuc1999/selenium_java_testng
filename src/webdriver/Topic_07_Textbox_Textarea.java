@@ -38,59 +38,56 @@ public class Topic_07_Textbox_Textarea {
 
 	}
 
-//	@Test
-//	public void TC_01_Sign_Up_Account() {
-//		driver.get("http://live.techpanda.org/");
-//		WebElement my_Account = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
-//		my_Account.click();
-//		WebElement my_Account_1 = driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']"));
-//		my_Account_1.click();
-//		WebElement create_Button = driver.findElement(By.xpath("//a[@title='Create an Account']"));
-//		create_Button.click();
-//		sleepInSecond(3);
-//		WebElement text_Box_First_Name = driver.findElement(By.xpath("//input[@id='firstname']"));
-//		text_Box_First_Name.sendKeys("Phung");
-//		String value_text_Box_First_Name = text_Box_First_Name.getAttribute("value");
-//		WebElement text_Box_Middle_Name = driver.findElement(By.xpath("//input[@id='middlename']"));
-//		text_Box_Middle_Name.sendKeys("Vinh");
-//		String value_text_Box_Middle_Name = text_Box_Middle_Name.getAttribute("value");
-//		WebElement text_Box_Last_Name = driver.findElement(By.xpath("//input[@id='lastname']"));
-//		text_Box_Last_Name.sendKeys("Phuc");
-//		String value_text_Box_Last_Name = text_Box_Last_Name.getAttribute("value");
-//		String total = (value_text_Box_First_Name) + " " + (value_text_Box_Middle_Name) + " "
-//				+ (value_text_Box_Last_Name);
-//		System.out.println(total);
-//		WebElement text_Box_Email_Address = driver.findElement(By.xpath("//input[@id='email_address']"));
-//		text_Box_Email_Address.sendKeys("pvphuc" + (ran.nextInt(9999)) + "@gmail.com");
-//		String value_text_Box_Email_Address = text_Box_Email_Address.getAttribute("value");
-//		System.out.println(value_text_Box_Email_Address);
-//		WebElement text_Box_Pass_Word = driver.findElement(By.xpath("//input[@id='password']"));
-//		text_Box_Pass_Word.sendKeys("Pvpgtvt2017!");
-//		WebElement text_Box_Confirm_Pass_Word = driver.findElement(By.xpath("//input[@id='confirmation']"));
-//		text_Box_Confirm_Pass_Word.sendKeys("Pvpgtvt2017!");
-//		WebElement check_Box_Rule = driver.findElement(By.xpath("//input[@id='is_subscribed']"));
-//		check_Box_Rule.click();
-//		WebElement button_Register = driver.findElement(By.xpath("//span[text()='Register']"));
-//		button_Register.click();
-//		sleepInSecond(3);
-//		WebElement message_Register_Success = driver
-//				.findElement(By.xpath("//span[text()='Thank you for registering with Main Website Store.']"));
-//		String text_Message_Register_Success = message_Register_Success.getText();
-//		Assert.assertEquals(text_Message_Register_Success, "Thank you for registering with Main Website Store.");
-//		WebElement contact_Information = driver.findElement(By.xpath("//div[@class='col-1']//p"));
-//		contact_Information.isDisplayed();
-//		String text_Contact_Information = contact_Information.getText();
-//		Assert.assertTrue(text_Contact_Information.contains(total));
-//		Assert.assertTrue(text_Contact_Information.contains(value_text_Box_Email_Address));
-//		sleepInSecond(3);
-//		WebElement my_Account_2 = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
-//		my_Account_2.click();
-//		WebElement log_Out = driver.findElement(By.xpath("//a[@title='Log Out']"));
-//		log_Out.click();
-//		sleepInSecond(7);
-//		String title = driver.getTitle();
-//		Assert.assertEquals(title, "Home page");
-//	}
+	@Test
+	public void TC_01_Sign_Up_Account() {
+		driver.get("http://live.techpanda.org/");
+		WebElement my_Account = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
+		my_Account.click();
+		WebElement my_Account_1 = driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']"));
+		my_Account_1.click();
+		WebElement create_Button = driver.findElement(By.xpath("//a[@title='Create an Account']"));
+		create_Button.click();
+		WebElement text_Box_First_Name = driver.findElement(By.xpath("//input[@id='firstname']"));
+		text_Box_First_Name.sendKeys("Phung");
+		String value_text_Box_First_Name = text_Box_First_Name.getAttribute("value");
+		WebElement text_Box_Middle_Name = driver.findElement(By.xpath("//input[@id='middlename']"));
+		text_Box_Middle_Name.sendKeys("Vinh");
+		String value_text_Box_Middle_Name = text_Box_Middle_Name.getAttribute("value");
+		WebElement text_Box_Last_Name = driver.findElement(By.xpath("//input[@id='lastname']"));
+		text_Box_Last_Name.sendKeys("Phuc");
+		String value_text_Box_Last_Name = text_Box_Last_Name.getAttribute("value");
+		String total = (value_text_Box_First_Name) + " " + (value_text_Box_Middle_Name) + " "
+				+ (value_text_Box_Last_Name);
+		System.out.println(total);
+		WebElement text_Box_Email_Address = driver.findElement(By.xpath("//input[@id='email_address']"));
+		text_Box_Email_Address.sendKeys("pvphuc" + (ran.nextInt(9999)) + "@gmail.com");
+		String value_text_Box_Email_Address = text_Box_Email_Address.getAttribute("value");
+		System.out.println(value_text_Box_Email_Address);
+		WebElement text_Box_Pass_Word = driver.findElement(By.xpath("//input[@id='password']"));
+		text_Box_Pass_Word.sendKeys("Pvpgtvt2017!");
+		WebElement text_Box_Confirm_Pass_Word = driver.findElement(By.xpath("//input[@id='confirmation']"));
+		text_Box_Confirm_Pass_Word.sendKeys("Pvpgtvt2017!");
+		WebElement check_Box_Rule = driver.findElement(By.xpath("//input[@id='is_subscribed']"));
+		check_Box_Rule.click();
+		WebElement button_Register = driver.findElement(By.xpath("//span[text()='Register']"));
+		button_Register.click();
+		WebElement message_Register_Success = driver
+				.findElement(By.xpath("//span[text()='Thank you for registering with Main Website Store.']"));
+		String text_Message_Register_Success = message_Register_Success.getText();
+		Assert.assertEquals(text_Message_Register_Success, "Thank you for registering with Main Website Store.");
+		WebElement contact_Information = driver.findElement(By.xpath("//div[@class='col-1']//p"));
+		contact_Information.isDisplayed();
+		String text_Contact_Information = contact_Information.getText();
+		Assert.assertTrue(text_Contact_Information.contains(total));
+		Assert.assertTrue(text_Contact_Information.contains(value_text_Box_Email_Address));
+		WebElement my_Account_2 = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
+		my_Account_2.click();
+		WebElement log_Out = driver.findElement(By.xpath("//a[@title='Log Out']"));
+		log_Out.click();
+		sleepInSecond(7);
+		String title = driver.getTitle();
+		Assert.assertEquals(title, "Home page");
+	}
 
 	@Test
 	public void TC_02_Verify_Information() {
@@ -144,45 +141,68 @@ public class Topic_07_Textbox_Textarea {
 		driver.findElement(By.xpath("//li[@class='oxd-userdropdown']")).click();
 		driver.findElement(By.xpath("//a[text()='Logout']")).click();
 	}
-	
 
-//	@Test
-//	public void TC_03_Verify_Error_Message_Pass_Word() {
-//		driver.get("http://live.techpanda.org/");
-//		WebElement my_Account = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
-//		my_Account.click();
-//		WebElement my_Account_1 = driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']"));
-//		my_Account_1.click();
-//		WebElement error_Message_Email = driver.findElement(By.xpath("//input[@id='email']"));
-//		error_Message_Email.sendKeys("pvphuc999@gmail.com");
-//		WebElement error_Message_Pass_Word = driver.findElement(By.xpath("//input[@id='pass']"));
-//		error_Message_Pass_Word.sendKeys("Pvp");
-//		WebElement login = driver.findElement(By.xpath("//button[@id='send2']"));
-//		login.click();
-//		WebElement error_Message_Pass_Word_1 = driver
-//				.findElement(By.xpath("//div[@id='advice-validate-password-pass']"));
-//		String text_Error_Message_Pass_Word_1 = error_Message_Pass_Word_1.getText();
-//		Assert.assertEquals(text_Error_Message_Pass_Word_1,
-//				"Please enter 6 or more characters without leading or trailing spaces.");
-//	}
-//
-//	@Test
-//	public void TC_04_Verify_Popup_Error() {
-//		driver.get("http://live.techpanda.org/");
-//		WebElement my_Account = driver.findElement(By.xpath("//a[@class='skip-link skip-account']"));
-//		my_Account.click();
-//		WebElement my_Account_1 = driver.findElement(By.xpath("//div[@id='header-account']//a[@title='My Account']"));
-//		my_Account_1.click();
-//		WebElement error_Message_Email = driver.findElement(By.xpath("//input[@id='email']"));
-//		error_Message_Email.sendKeys("pvphuc999@gmail.com");
-//		WebElement error_Message_Pass_Word = driver.findElement(By.xpath("//input[@id='pass']"));
-//		error_Message_Pass_Word.sendKeys("Pvpgtvt2017!");
-//		WebElement login = driver.findElement(By.xpath("//button[@id='send2']"));
-//		login.click();
-//		WebElement error_Popup = driver.findElement(By.xpath("//span[text()='Invalid login or password.']"));
-//		String text_Error_Popup = error_Popup.getText();
-//		Assert.assertEquals(text_Error_Popup, "Invalid login or password.");
-//	}
+	@Test
+	public void TC_03_Verify_Error_Message_Pass_Word() {
+		driver.get("http://demo.guru99.com/v4");
+		driver.findElement(By.xpath("//input[@name='uid']")).sendKeys("mngr535258");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("qejygEs");
+		driver.findElement(By.xpath("//input[@name='btnLogin']")).click();
+		String url = driver.getCurrentUrl();
+		Assert.assertEquals(url, "https://demo.guru99.com/v4/manager/Managerhomepage.php");
+		driver.findElement(By.xpath("//a[text()='New Customer']")).click();
+		driver.findElement(By.xpath("//input[@name='name']")).sendKeys("pvphuc");
+		driver.findElement(By.xpath("//input[@name='rad1' and @value='m']")).click();
+		driver.findElement(By.xpath("//input[@id='dob']")).sendKeys("10292023");
+		driver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("devtest");
+		driver.findElement(By.xpath("//input[@name='city']")).sendKeys("devtest");
+		driver.findElement(By.xpath("//input[@name='state']")).sendKeys("devtest");
+		driver.findElement(By.xpath("//input[@name='pinno']")).sendKeys("091019");
+		driver.findElement(By.xpath("//input[@name='telephoneno']")).sendKeys("0986745978");
+		String email = ("pvphuc" + ran.nextInt() + "@gmail.com");
+		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys(email);
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Pvpgtvt2017!");
+		driver.findElement(By.xpath("//input[@name='sub']")).click();
+		String customer_ID = driver.findElement(By.xpath("//td[text()='Customer ID']/following-sibling::td")).getText();
+		System.out.println(customer_ID);
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Customer Name']/following-sibling::td")).getText(), "pvphuc");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Gender']/following-sibling::td")).getText(), "male");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Birthdate']/following-sibling::td")).getText(), "2023-10-29");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Address']/following-sibling::td")).getText(), "devtest");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='City']/following-sibling::td")).getText(), "devtest");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='State']/following-sibling::td")).getText(), "devtest");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Pin']/following-sibling::td")).getText(), "091019");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Mobile No.']/following-sibling::td")).getText(), "0986745978");
+		Assert.assertEquals(
+				driver.findElement(By.xpath("//td[text()='Email']/following-sibling::td")).getText(), email);
+		driver.findElement(By.xpath("//a[text()='Edit Customer']")).click();
+		driver.findElement(By.xpath("//input[@name='cusid']")).sendKeys(customer_ID);
+		driver.findElement(By.xpath("//input[@name='AccSubmit']")).click();
+		Assert.assertEquals(driver.findElement(By.xpath("//input[@name='name']")).getAttribute("value"), "pvphuc");
+		Assert.assertEquals(driver.findElement(By.xpath("//textarea[@name='addr']")).getText(), "devtest");
+		driver.findElement(By.xpath("//textarea[@name='addr']")).clear();
+		driver.findElement(By.xpath("//textarea[@name='addr']")).sendKeys("devtest01");
+		driver.findElement(By.xpath("//input[@name='city']")).clear();
+		driver.findElement(By.xpath("//input[@name='city']")).sendKeys("devtest01");
+		driver.findElement(By.xpath("//input[@name='state']")).clear();
+		driver.findElement(By.xpath("//input[@name='state']")).sendKeys("devtest01");
+		driver.findElement(By.xpath("//input[@name='pinno']")).clear();
+		driver.findElement(By.xpath("//input[@name='pinno']")).sendKeys("091020");
+		driver.findElement(By.xpath("//input[@name='telephoneno']")).clear();
+		driver.findElement(By.xpath("//input[@name='telephoneno']")).sendKeys("0986745979");
+		driver.findElement(By.xpath("//input[@name='emailid']")).clear();
+		String email_1 = ("pvphuc" + ran.nextInt() + "@gmail.com");
+		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys(email_1);
+		driver.findElement(By.xpath("//input[@name='sub']")).click();
+	}
 
 	public void sleepInSecond(long timeInSecond) {
 		try {
