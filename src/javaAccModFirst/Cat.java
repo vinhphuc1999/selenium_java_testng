@@ -1,0 +1,5 @@
+package javaAccModFirst;
+
+class Cat {
+
+}
